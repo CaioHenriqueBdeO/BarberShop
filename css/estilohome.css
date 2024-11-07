@@ -1,0 +1,328 @@
+* {
+	padding: 0;
+  	margin: 0;
+  	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	overflow-x: hidden;
+	font-family: Baskerville, "georgia", sans-serif;
+}
+
+.logo {
+	border-radius: 100%;
+}
+
+.hidden {
+	display: none;
+}
+
+#menurespbg {
+	background-color: #1C1C1C;
+}
+
+#menu li {
+	margin-right: 30px;
+}
+
+#menu a {
+	color: #eeeeee;
+}
+
+#menu a:hover {
+	color: #ffaa00;
+	transition: 0.5s;
+}
+
+.subtitulo {
+	color: #ffaa00;
+}
+
+.redes-sociais {
+	border-radius: 100%;
+}
+
+.insta {
+	width: 50px;
+}
+
+.whats {
+	width: 75px;
+}
+
+.insta:hover {
+	border: solid 1px #ffffff;
+	box-shadow: 0px 0px 20px rgb(255, 0, 255);
+}
+
+.whats:hover {
+	border: solid 1px #ffffff;
+	box-shadow: 0px 0px 20px rgb(4, 180, 4);
+}
+
+.conteudo-titulo {
+	position: absolute;
+	left: 0%;
+	top: 45%;
+	width: 100%;
+	text-align: center;
+}
+
+.conteudo-titulo span.titulo {
+	color: #fff;
+	background-color: #111;
+	padding: 18px;
+	font-size: 25px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+.caixa1, .caixa2, .caixa3, .caixa4, .caixa5 {
+	position: relative;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;    /*  Segredo do efeito parallax  */
+}
+
+.caixa2 {
+	background-image: url(../img/fundo1.jpg);
+}
+
+.caixa3 {
+	background-image: url(../img/fundo2.png);
+}
+
+.caixa4 {
+	background-image: url(../img/fundo3.jpg);
+}
+
+.caixa5 {
+	background-image: url(../img/fundo4.jpeg);
+}
+
+.caixa3a {
+	background-color: #ffffff
+}
+
+.caixa4a {
+	background-color: #F2F2F2;
+}
+
+.btn-orange {
+	background-color: #ffaa00;
+}
+
+.btn-orange:hover {
+	background-color: #000000;
+	color: #ffffff!important;
+}
+
+.marcar, .imgmain {
+	text-align: center;
+}
+
+.card-icon {
+	height: 150px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-text {
+	color: var(--color-text-out);
+	font-size: 15px;
+	padding: 0px 30px;
+}
+
+.card-text p {
+	font-size: 22px;
+	color: #000000;
+	margin-bottom: 10px;
+}
+
+.container-menu {
+	margin-bottom: 40px;
+}
+
+.card-item {
+	height: 360px;
+}
+
+.card-item .img-produto img {
+	width: 100%;
+	height: 180px;
+	border-radius: 11px;
+}
+
+.card-item .title-produto {
+	color: #000000;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	height: 40px;
+	margin-bottom: 0px;
+}
+
+.card-item .price-produto {
+	color: #ffaa00;
+	font-size: 24px;
+}
+
+.card-item .add-agendar {
+	display: none;
+	text-align: center;
+	height: 30px;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-add {
+	border: 2px solid #000000;
+	font-size: 16px;
+	padding: 4px 10px;
+	border-radius: 10px;
+	color: #000000;
+	background-color: #ffffff;
+	margin-left: 15px;
+}
+
+.texto-pontos {
+	text-align: center;
+	height: 30px;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-item:hover {
+	background-color: #ffaa00;
+}
+
+.card-item:hover .title-produto {
+	display: none;
+}
+
+.card-item:hover .add-agendar {
+	display: flex;
+}
+
+.card-item:hover .price-produto {
+	color: var(--color-black-heavy)!important;
+	margin-top: 20px;
+}
+
+.hint-title {
+	color: #ffaa00;
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.title {
+	color: var(--color-black);
+	font-size: 40px;
+	margin-top: 5px;
+	margin-bottom: 30px;
+}
+
+.topo {
+	color: #eeeeee;
+	background-color: #352356;
+	border: solid 1px #eeeeee;
+}
+
+.topo:hover {
+	color: #eeeeee;
+	background-color: #352356;
+	opacity: 0.8;
+	border: solid 1px #eeeeee;
+	transition: 0.5s;
+	border: 1px solid #eeeeee;
+	box-shadow: 0px 0px 20px rgb(53,35,86);
+}
+
+.topo2 {
+	color: #eeeeee;
+	background-color: #ffaa00;
+	border: solid 1px #eeeeee;
+}
+
+.topo2:hover {
+	color: #eeeeee;
+	background-color: #ffaa00;
+	opacity: 0.8;
+	border: solid 1px #eeeeee;
+	transition: 0.5s;
+	border: 1px solid #eeeeee;
+	box-shadow: 0px 0px 20px rgb(255,170,0);
+}
+
+#cartão {
+	width: 90%;
+	border-radius: 15px;
+	box-shadow: 0px 0px 20px rgb(53,35,86);
+}
+
+.cor1 {
+	color: #352356;
+}
+
+.cor2 {
+	color: #ffaa00;
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+	.imgmain {
+		height: 150px;
+	}
+	.img-banner {
+		display: none;
+	}
+	.sumir {
+		display: none;
+	}
+
+	.rod a {
+		font-size: 10px;
+	}
+
+	.marcar {
+		background-image: url(../img/barbeiro.png);
+		background-position: bottom;
+	}
+
+	.person-min {
+		background-color: #000000;
+		border-radius: 10px;
+		color: #ffffff;
+		opacity: 0.9;
+		padding: 5px;
+	}
+
+	
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+	
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+	
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+	
+}

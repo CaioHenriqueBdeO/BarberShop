@@ -1,0 +1,80 @@
+body {
+	background-color: #E6E6E6;
+}
+
+h1, h3, h4, h5, h6, p {
+	font-family: 'baskerville', georgia, sans-serif;
+}
+
+fieldset {
+	font-family: 'baskerville', georgia, sans-serif;
+	margin: 1em 0;
+	padding: 1em;
+	border: 1px solid #ccc;
+	background: #f8f8f8;
+}
+
+.hiden {
+	display: none;
+}
+
+th {
+	background-color: #045FB4;
+	color: #ffffff;
+}
+
+#arealogin {
+	background-color: #ffffff;
+	height: 100%;
+	box-shadow: 0px 0px 10px rgb(169,169,169);
+	border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+}
+
+#centralizador {
+	text-align: center;
+}
+
+#titulo {
+	text-align: center;
+	font-family: 'baskerville', georgia, sans-serif;
+}
+
+#inputsusuario {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+
+#linkbtn {
+	text-transform: none;
+	text-decoration: none;
+	color: #0040FF;
+}
+
+#btncuston {
+	background-color: #CEE3F6;
+	color: #0040FF;
+	border-radius: 500px;
+	-webkit-border-radius: 500px;
+	-moz-border-radius: 500px;
+	text-transform: uppercase;
+	transition: background 0.4s, color 0.4s;
+	padding: 10px 20px;
+	width: 100%;
+}
+
+#linkbtn:hover {
+	color: #ffffff;
+}
+
+#btncuston:hover {
+	background-color: #0040FF;
+	color: #ffffff;
+}
+
+/* ---------------------------------------------------------------------------------------
+-------------- esilos da home ---------------------------------------------------
+---------------------------------------------------------------------*/
+
