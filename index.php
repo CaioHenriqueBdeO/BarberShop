@@ -47,7 +47,7 @@ try {
     <main class="caixa1" id="main">
       <nav class="navbar navbar-expand-lg navbar-dark" id="menurespbg">
         <div class="container">
-          <a href="" class="navbar-brand ml-5"><img class="mr-3 logo" src="img/logo.jpg" style="width: 80px;"><h3 class="d-inline nomempresa">Barber Shop</h3></a>
+          <a href="" class="navbar-brand ml-5"><img class="mr-3 logo" src="img/logo.jpg" style="width: 80px;"><h3 class="d-inline nomempresa">BarberShop - Beleza Conectada</h3></a>
           <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-target">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -73,14 +73,13 @@ try {
         <div class="row align-items-center">
           <div class="col marcar">
             <div class="mt-5">
-              <h1 class="title">Olá, <?= htmlspecialchars($usuario['nome']) ?>!</h1>
+              <h1 class="title-usuario">Olá, <?= htmlspecialchars($usuario['nome']) ?>!</h1>
               <h2 class="subtitulo mb-4"><b>A moderna barbearia para grandes homens!</b></h2>
               <p class="person-min">A vida é muito curta para não fazer a barba. Agende seu horário,
               seja nosso cliente fiel, que prometemos pontos de fidelidades na 
               hora de pagar o seu corte. </p>
               <div>
-                <a href="#"><img src="img/whats.jpg" class="redes-sociais whats mr-4"></a>
-                <a href="#"><img src="img/insta.jpeg" class="redes-sociais insta"></a>
+                <a href="#Contato"><img src="img/whatsbg.png" class="redes-sociais whats mr-4"></a>
               </div>
               
             </div>
@@ -98,7 +97,7 @@ try {
       </div>
     </div>
 
-    <section>
+    <section id="Serviços">
       <div class="container">
         <div class="row">
           <div class="col-12 text-center mb-5 mt-2">
@@ -108,246 +107,25 @@ try {
             </h1>
           </div>
           <div class="col-12 container-menu">
-            <a class="btn btn-orange btn-sm mr-3 active barba-menu">
+            <a class="btn btn-orange btn-sm mr-3 active a-barba active" onclick="servicos.metodos.obterItensServicos('barba')">
               &nbsp; Barba
             </a>
-            <a class="btn btn-orange btn-sm mr-3 corte-menu" >&nbsp; Cortes
+            <a class="btn btn-orange btn-sm mr-3 a-cortes active" onclick="servicos.metodos.obterItensServicos('cortes')">&nbsp; Cortes
             </a>
-            <a class="btn btn-orange btn-sm mr-3 quimica-menu">
+            <a class="btn btn-orange btn-sm mr-3 a-quimica active" onclick="servicos.metodos.obterItensServicos('quimica')">
               &nbsp; Quimica
             </a>
-            <a class="btn btn-orange btn-sm mr-3 combo-menu">
+            <a class="btn btn-orange btn-sm mr-3 a-combos active" onclick="servicos.metodos.obterItensServicos('combos')">
               &nbsp; Combos
             </a>
           </div>
 
           <div class="col-12">
-            <div class="row barba" id="Serviços">
-              <div class="col-sm-3 col-9 mb-5">
-                <div class="card card-item">
-                  <div class="img-produto">
-                    <img src="img/barba2.jpg"/>
-                  </div>
-                  <p class="title-produto text-center mt-4">
-                    <b>Zero Beard</b>
-                  </p>
-                  <p class="price-produto text-center">
-                    <b>R$ 15,00</b>
-                  </p>
-                  <div class="add-agendar">
-                    <span class="btn btn-add mb-2"><a href="https://wa.me/5511990155204?text=Olá,+quero+agendar+um+horário+para+Zero+Beard,+lembre+que+estou+ganhando+35+pontos!" target="_blank">Agendar</a></span><br>
-                  </div>
-                    <p class="texto-pontos mt-1">Estou recbendo 35 pontos ao agendar!</p>
-                </div>
-              </div>
-
-              <div class="col-sm-3 col-9 mb-5">
-                <div class="card card-item">
-                  <div class="img-produto">
-                    <img src="img/barba.jpg"/>
-                  </div>
-                  <p class="title-produto text-center mt-4">
-                    <b>Faded Beard</b>
-                  </p>
-                  <p class="price-produto text-center">
-                    <b>R$ 30,00</b>
-                  </p>
-                  <div class="add-agendar">
-                    <span class="btn btn-add mb-2"><a href="https://wa.me/5511990155204?text=Olá,+quero+agendar+um+horário+para+Faded+Beard,+lembre+que+estou+ganhando+50+pontos!" target="_blank">Agendar</a></span><br>
-                  </div>
-                    <p class="texto-pontos mt-1">Estou recbendo 50 pontos ao agendar!</p>
-                </div>
-              </div>
-
-              <div class="col-sm-3 col-9 mb-5">
-                <div class="card card-item">
-                  <div class="img-produto">
-                    <img src="img/bigode.jpg"/>
-                  </div>
-                  <p class="title-produto text-center mt-4">
-                    <b>Handlebar</b>
-                  </p>
-                  <p class="price-produto text-center">
-                    <b>R$ 25,00</b>
-                  </p>
-                  <div class="add-agendar">
-                    <span class="btn btn-add mb-2"><a href="https://wa.me/5511990155204?text=Olá,+quero+agendar+um+horário+para+Handlebar,+lembre+que+estou+ganhando+45+pontos!" target="_blank">Agendar</a></span><br>
-                  </div>
-                    <p class="texto-pontos mt-1">Estou recbendo 45 pontos ao agendar!</p>
-                </div>
-              </div>
+            <div class="row barba conteudo" id="itensServicos">
+              
             </div>
-
-            <div class="row corte hidden" id="Serviços-corte">
-              <div class="col-sm-3 col-9 mb-5">
-                <div class="card card-item">
-                  <div class="img-produto">
-                    <img src="img/corte1.jpg"/>
-                  </div>
-                  <p class="title-produto text-center mt-4">
-                    <b>Social</b>
-                  </p>
-                  <p class="price-produto text-center">
-                    <b>R$ 30,00</b>
-                  </p>
-                  <div class="add-agendar">
-                    <span class="btn btn-add mb-2"><a href="https://wa.me/5511990155204?text=Olá,+quero+agendar+um+horário+para+um+corte+social,+lembre+que+estou+ganhando+50+pontos!" target="_blank">Agendar</a></span><br>
-                  </div>
-                    <p class="texto-pontos mt-1">Estou recbendo 50 pontos ao agendar!</p>
-                </div>
-              </div>
-
-              <div class="col-sm-3 col-9 mb-5">
-                <div class="card card-item">
-                  <div class="img-produto">
-                    <img src="img/corte2.jpg"/>
-                  </div>
-                  <p class="title-produto text-center mt-4">
-                    <b>Degrades</b>
-                  </p>
-                  <p class="price-produto text-center">
-                    <b>R$ 40,00</b>
-                  </p>
-                  <div class="add-agendar">
-                    <span class="btn btn-add mb-2"><a href="https://wa.me/5511990155204?text=Olá,+quero+agendar+um+horário+para+um+Degrade,+lembre+que+estou+ganhando+60+pontos!" target="_blank">Agendar</a></span><br>
-                  </div>
-                    <p class="texto-pontos mt-1">Estou recbendo 60 pontos ao agendar!</p>
-                </div>
-              </div>
-
-              <div class="col-sm-3 col-9 mb-5">
-                <div class="card card-item">
-                  <div class="img-produto">
-                    <img src="img/corte3.jpg"/>
-                  </div>
-                  <p class="title-produto text-center mt-4">
-                    <b>Corte + Desenho</b>
-                  </p>
-                  <p class="price-produto text-center">
-                    <b>R$ 45,00</b>
-                  </p>
-                  <div class="add-agendar">
-                    <span class="btn btn-add mb-2"><a href="https://wa.me/5511990155204?text=Olá,+quero+agendar+um+horário+para+um+Corte+++Barba,+lembre+que+estou+ganhando+65+pontos!" target="_blank">Agendar</a></span><br>
-                  </div>
-                    <p class="texto-pontos mt-1">Estou recbendo 65 pontos ao agendar!</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="row quimica hidden" id="Serviços-quimica">
-              <div class="col-sm-3 col-9 mb-5">
-                <div class="card card-item">
-                  <div class="img-produto">
-                    <img src="img/quimica1.jpeg"/>
-                  </div>
-                  <p class="title-produto text-center mt-4">
-                    <b>Nevou</b>
-                  </p>
-                  <p class="price-produto text-center">
-                    <b>R$ 55,00</b>
-                  </p>
-                  <div class="add-agendar">
-                    <span class="btn btn-add mb-2"><a href="https://wa.me/5511990155204?text=Olá,+quero+agendar+um+horário+para+um+Nevou,+lembre+que+estou+ganhando+75+pontos!" target="_blank">Agendar</a></span><br>
-                  </div>
-                    <p class="texto-pontos mt-1">Estou recbendo 75 pontos ao agendar!</p>
-                </div>
-              </div>
-
-              <div class="col-sm-3 col-9 mb-5">
-                <div class="card card-item">
-                  <div class="img-produto">
-                    <img src="img/quimica2.png"/>
-                  </div>
-                  <p class="title-produto text-center mt-4">
-                    <b>Progressiva</b>
-                  </p>
-                  <p class="price-produto text-center">
-                    <b>R$ 70,00</b>
-                  </p>
-                  <div class="add-agendar">
-                    <span class="btn btn-add mb-2"><a href="https://wa.me/5511990155204?text=Olá,+quero+agendar+um+horário+para+uma+Progressiva,+lembre+que+estou+ganhando+90+pontos!" target="_blank">Agendar</a></span><br>
-                  </div>
-                    <p class="texto-pontos mt-1">Estou recbendo 90 pontos ao agendar!</p>
-                </div>
-              </div>
-
-              <div class="col-sm-3 col-9 mb-5">
-                <div class="card card-item">
-                  <div class="img-produto">
-                    <img src="img/quimica3.jpeg"/>
-                  </div>
-                  <p class="title-produto text-center mt-4">
-                    <b>Tintura</b>
-                  </p>
-                  <p class="price-produto text-center">
-                    <b>R$ 45,00</b>
-                  </p>
-                  <div class="add-agendar">
-                    <span class="btn btn-add mb-2"><a href="https://wa.me/5511990155204?text=Olá,+quero+agendar+um+horário+para+uma+Tintura,+lembre+que+estou+ganhando+65+pontos!" target="_blank">Agendar</a></span><br>
-                  </div>
-                    <p class="texto-pontos mt-1">Estou recbendo 65 pontos ao agendar!</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="row combo col-sm-12 hidden" id="Serviços-combo">
-              <div class="col-sm-3 col-9 mb-5">
-                <div class="card card-item">
-                  <div class="img-produto">
-                    <img src="img/combo1.jpeg"/>
-                  </div>
-                  <p class="title-produto text-center mt-4">
-                    <b>Barba + Corte + Somb.</b>
-                  </p>
-                  <p class="price-produto text-center">
-                    <b>R$ 55,00</b>
-                  </p>
-                  <div class="add-agendar">
-                    <span class="btn btn-add mb-2"><a href="https://wa.me/5511990155204?text=Olá,+quero+agendar+um+horário+para+Barba+++Corte+++Somb.,+lembre+que+estou+ganhando+75+pontos!" target="_blank">Agendar</a></span><br>
-                  </div>
-                    <p class="texto-pontos mt-1">Estou recbendo 75 pontos ao agendar!</p>
-                </div>
-              </div>
-
-              <div class="col-sm-3 col-9 mb-5">
-                <div class="card card-item">
-                  <div class="img-produto">
-                    <img src="img/cobo2.jpg"/>
-                  </div>
-                  <p class="title-produto text-center mt-4">
-                    <b>Corte + Progr./Quimica</b>
-                  </p>
-                  <p class="price-produto text-center">
-                    <b>R$ 90,00</b>
-                  </p>
-                  <div class="add-agendar">
-                    <span class="btn btn-add mb-2"><a href="https://wa.me/5511990155204?text=Olá,+quero+agendar+um+horário+para+um+Corte+++Progr./Quimica,+lembre+que+estou+ganhando+110+pontos!" target="_blank">Agendar</a></span><br>
-                  </div>
-                    <p class="texto-pontos mt-1">Estou recbendo 110 pontos ao agendar!</p>
-                </div>
-              </div>
-
-              <div class="col-sm-3 col-9 mb-5">
-                <div class="card card-item">
-                  <div class="img-produto">
-                    <img src="img/combo3.jpeg"/>
-                  </div>
-                  <p class="title-produto text-center mt-4">
-                    <b>Geral</b>
-                  </p>
-                  <p class="price-produto text-center">
-                    <b>R$ 130,00</b>
-                  </p>
-                  <div class="add-agendar">
-                    <span class="btn btn-add mb-2"><a href="https://wa.me/5511990155204?text=Olá,+quero+agendar+um+horário+para+dar+um+Geral,+lembre+que+estou+ganhando+150+pontos!" target="_blank">Agendar</a></span><br>
-                  </div>
-                    <p class="texto-pontos mt-1">Estou recbendo 150 pontos ao agendar!</p>
-                </div>
-              </div>
-            </div>
-
-            
           </div>
+
           <div>
             <p class="text-center title mt-4">Entenda nossos pontos abaixo!</p>
           </div>
@@ -371,7 +149,7 @@ try {
               <b>Entenda os pontos!</b>
             </h1>
             <b><p class="mt-5 text-justify">A cada serviço agendado são acrecidos pontos que cheagam ao chat do seu barbeiro. A pontuação é acrecida no valor do serviço mais 20 pontos. Ao ajuntar 300 pontos ganhe uma barba de graça. Ao ajuntar 500 pontos ganhe um corte de graça. Ao ajuntar 1000 pontos ganhe qualquer serviço da barbearia de graça. Comece ajuntar agora!!</p></b>
-            <p><a class="btn btn-lg btn-orange mt-5">Agendar</a></p>
+            <p><a class="btn btn-lg btn-orange mt-5" href="#Serviços">Agendar</a></p>
           </div>
         </div>
       </div>
@@ -421,7 +199,7 @@ try {
           <a href="#Fidelidade-points" class="btn cor2">Back Fidelidade -</a>
           <a href="#Serviços" class="btn cor2">Back Serviços</a>
           </div>
-        <p class="text-center cor1">&copy; Todos os direitos reservados - BarberShop - 2024</p>
+        <p class="text-center cor1">&copy; Todos os direitos reservados - BarberShop Beleza Conectada - 2024</p>
       </div> 
     </footer>
 
@@ -435,6 +213,7 @@ try {
     <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="js/modernizr-3.5.0.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/dados.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
