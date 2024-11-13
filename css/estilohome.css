@@ -124,6 +124,18 @@ html, body {
 	text-align: center;
 }
 
+#cortes-conteudo {
+	display: none;
+}
+
+#quimica-conteudo {
+	display: none;
+}
+
+#combos-conteudo {
+	display: none;
+}
+
 .card-icon {
 	height: 150px;
 	margin: 0 auto;
@@ -181,14 +193,15 @@ html, body {
 	align-items: center;
 }
 
-.btn-add {
+.btn-add a {
 	border: 2px solid #000000;
 	font-size: 16px;
 	padding: 4px 10px;
 	border-radius: 10px;
-	color: #000000;
-	background-color: #ffffff;
+	color: #ffffff;
+	background-color: #000000;
 	margin-left: 15px;
+	text-decoration: none;
 }
 
 .texto-pontos {
@@ -224,6 +237,13 @@ html, body {
 
 .title {
 	color: var(--color-black);
+	font-size: 40px;
+	margin-top: 5px;
+	margin-bottom: 30px;
+}
+
+.title-usuario {
+	color: #000000;
 	font-size: 40px;
 	margin-top: 5px;
 	margin-bottom: 30px;
@@ -304,6 +324,17 @@ html, body {
 		padding: 5px;
 	}
 
+	.caixa1 {
+		background-color: #1C1C1C;
+	}
+
+	.title-usuario {
+		color: #ffffff;
+		font-size: 40px;
+		margin-top: 5px;
+		margin-bottom: 30px;
+	}
+
 	
 }
 
@@ -322,6 +353,10 @@ html, body {
 	
 }
 
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+	
+}
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
 	
